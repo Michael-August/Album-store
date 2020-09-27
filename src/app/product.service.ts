@@ -6,12 +6,12 @@ import { Http, Response } from '@angular/http'
 @Injectable()
 export class ProductService {
 
-  constructor(private private_http: Http) { }
+  constructor(private _http: Http) { }
 
   private _albumUrl = "../assets/album.json"
 
   getAlbum(id: number){
-    return this.private_http.get(this._albumUrl)
+    return this._http.get(this._albumUrl)
     .map(response => response.json())
   }
 }
